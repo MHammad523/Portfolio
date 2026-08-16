@@ -27,7 +27,7 @@ except ImportError:
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "data", "resume.json")
 OUT_PATH = os.path.join(ROOT, "index.html")
-SITE_URL = "https://melodic-fox-416913.netlify.app/"  # update if you deploy elsewhere
+SITE_URL = "https://mhammad523.github.io/"  # update if you deploy elsewhere
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 

@@ -21,7 +21,7 @@ import html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "data", "resume.json")
 OUT_PATH = os.path.join(ROOT, "Resume.html")
-PORTFOLIO_URL = "https://melodic-fox-416913.netlify.app"
+PORTFOLIO_URL = "https://mhammad523.github.io/"
 
 
 def esc(s):
