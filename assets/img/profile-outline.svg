@@ -1,0 +1,67 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flat icon avatar illustration of Muhammad Hammad">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="300" cy="300" r="250"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="300" cy="300" r="268" fill="none" stroke="url(#ringGrad)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <line x1="554.9" y1="382.8" x2="577.7" y2="390.2" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="577.7" cy="390.2" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+  <line x1="382.8" y1="554.9" x2="390.2" y2="577.7" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="390.2" cy="577.7" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+  <line x1="120.7" y1="499.2" x2="104.6" y2="517.0" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="104.6" cy="517.0" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+  <line x1="45.1" y1="217.2" x2="22.3" y2="209.8" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="22.3" cy="209.8" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+  <line x1="191.0" y1="55.2" x2="181.2" y2="33.2" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="181.2" cy="33.2" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+  <line x1="434.0" y1="67.9" x2="446.0" y2="47.1" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="446.0" cy="47.1" r="8" fill="#e9edf3" stroke="url(#ringGrad)" stroke-width="3"/>
+
+  <circle cx="300" cy="300" r="250" fill="#e9edf3"/>
+
+  <g clip-path="url(#circleClip)">
+    <path d="M 150 620
+C 150 520, 175 470, 220 452
+L 265 440
+C 275 465, 285 480, 300 482
+C 315 480, 325 465, 335 440
+L 380 452
+C 425 470, 450 520, 450 620
+Z" fill="#12808c"/>
+    <path d="M 300 482 C 315 480, 325 465, 335 440 L 355 446 C 340 470, 322 486, 300 488 Z" fill="#0d6a74" opacity="0.5"/>
+    <rect x="272" y="415" width="56" height="55" fill="#a2745e"/>
+    <path d="M 300 218
+C 355 218, 380 260, 378 315
+C 376 372, 348 428, 300 428
+C 252 428, 224 372, 222 315
+C 220 260, 245 218, 300 218
+Z" fill="#a2745e"/>
+    <ellipse cx="207" cy="332" rx="12" ry="20" fill="#a2745e"/>
+    <ellipse cx="393" cy="332" rx="12" ry="20" fill="#a2745e"/>
+    <path d="M 300 325 C 298 340, 296 350, 300 356 C 304 353, 306 348, 304 344" fill="none" stroke="#8f6350" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 278 378 Q 300 390 322 378" fill="none" stroke="#1c1a1e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 214 292
+C 209 226, 220 162, 264 139
+C 281 130, 302 128, 320 136
+C 356 152, 380 190, 386 236
+C 389 258, 388 276, 386 292
+C 380 268, 368 249, 358 244
+C 340 223, 320 217, 300 217
+C 280 217, 260 223, 242 244
+C 232 249, 220 268, 214 292
+Z" fill="#1c1a1e"/>
+    <path d="M 300 133 C 295 148, 292 165, 296 182" fill="none" stroke="#e9edf3" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+    <rect x="248" y="298" width="38" height="8" rx="4" fill="#1c1a1e" transform="rotate(-4 267 302)"/>
+    <rect x="314" y="298" width="38" height="8" rx="4" fill="#1c1a1e" transform="rotate(4 333 302)"/>
+    <ellipse cx="267" cy="323" rx="9" ry="10" fill="#1c1a1e"/>
+    <ellipse cx="333" cy="323" rx="9" ry="10" fill="#1c1a1e"/>
+  </g>
+
+  <circle cx="300" cy="300" r="250" fill="none" stroke="url(#ringGrad)" stroke-width="4"/>
+</svg>

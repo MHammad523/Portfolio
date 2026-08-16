@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://melodic-fox-416913.netlify.app/sitemap.xml

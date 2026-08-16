@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  /* Set theme before first paint to avoid a flash of the wrong theme. */
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Hammad — Web Developer / C#/Python Programmer / Database Administrator</title>
+<meta name="description" content="I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I&#x27;ve worked with clients across Logistics, Ret…">
+<meta name="keywords" content="Web Developer, C#/Python Programmer, Database Administrator, Backend Developer, .NET Developer, Database Administrator, Backend AI Developer, Python Developer, React Developer, Freelancer">
+<meta name="author" content="Muhammad Hammad">
+<link rel="canonical" href="https://melodic-fox-416913.netlify.app/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7c5cff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Muhammad Hammad">
+<meta property="og:title" content="Muhammad Hammad — Web Developer / C#/Python Programmer / Database Administrator">
+<meta property="og:description" content="I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I&#x27;ve worked with clients across Logistics, Ret…">
+<meta property="og:image" content="https://melodic-fox-416913.netlify.app/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://melodic-fox-416913.netlify.app/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Hammad — Web Developer / C#/Python Programmer / Database Administrator">
+<meta name="twitter:description" content="I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I&#x27;ve worked with clients across Logistics, Ret…">
+<meta name="twitter:image" content="https://melodic-fox-416913.netlify.app/assets/img/og-card.png">
+
+<!-- Favicons -->
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Muhammad Hammad", "url": "https://melodic-fox-416913.netlify.app/", "email": "mailto:mhammad523@gmail.com", "jobTitle": "Web Developer", "description": "I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I've worked with clients across Logistics, Retail, and cutting-edge AI. My expertise includes building robust, scalable applications with C# and .NET, integrating REST APIs and databases, and, most recently, designing offline-first AI systems with Python and Ollama for clients with strict data-privacy requirements.", "address": {"@type": "PostalAddress", "addressLocality": "Karachi, Pakistan"}, "sameAs": ["https://github.com/MHammad523/Portafolio", "https://www.behance.net/rdasher"], "knowsAbout": ["Backend Developer", ".NET Developer", "Database Administrator", "Backend AI Developer", "Python Developer", "React Developer", "Freelancer"]}</script>
+</head>
+<body id="top">
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="bg-decor" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="grid"></div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand">Muhammad<span class="brand-dot">.</span>dev</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/MHammad523/Portafolio" target="_blank" rel="noopener" aria-label="Github"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a class="icon-btn" href="https://www.behance.net/rdasher" target="_blank" rel="noopener" aria-label="Behance"><i class="bi bi-behance" aria-hidden="true"></i></a>
+
+      <button id="theme-toggle" class="icon-btn" aria-label="Switch theme" type="button"><i class="bi bi-sun" aria-hidden="true"></i></button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button"><i class="bi bi-list" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section id="hero" class="hero" aria-label="Introduction">
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">Hi, I'm</p>
+    <h1 class="hero-name reveal">Muhammad <span class="grad-text">Hammad</span></h1>
+    <p class="hero-role reveal reveal-delay-1">I'm a <span id="typed-role" class="typed-role" data-items='["Backend Developer", ".NET Developer", "Database Administrator", "Backend AI Developer", "Python Developer", "React Developer", "Freelancer"]'></span></p>
+    <p class="hero-bio reveal reveal-delay-2">I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I&#x27;ve worked with clients across Logistics, Retail, and cutting-edge AI. My expertise includes building robust, scalable applications with C# and .NET, integrating REST APIs and databases, and, most recently, designing offline-first AI systems with Python and Ollama for clients with strict data-privacy requirements.</p>
+    <div class="hero-cta reveal reveal-delay-2">
+      <a href="#contact" class="btn btn-primary">Get in touch <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      <a href="MHammadResume.pdf" class="btn btn-ghost" download>Download Resume <i class="bi bi-download" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to content"><i class="bi bi-mouse" aria-hidden="true"></i></a>
+</section>
+<section id="about" class="section about" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <div class="photo-frame">
+        <img src="assets/img/profile-img.jpg" alt="Portrait of Muhammad Hammad" width="600" height="600" loading="eager" decoding="async">
+      </div>
+    </div>
+    <div class="about-copy reveal reveal-delay-1">
+      <p class="eyebrow">About Me</p>
+      <h2 id="about-title">Turning complex problems into <span class="grad-text">clean, reliable software</span>.</h2>
+      <p>I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I&#x27;ve worked with clients across Logistics, Retail, and cutting-edge AI. My expertise includes building robust, scalable applications with C# and .NET, integrating REST APIs and databases, and, most recently, designing offline-first AI systems with Python and Ollama for clients with strict data-privacy requirements.</p>
+      <ul class="about-facts">
+        <li><i class="bi bi-briefcase" aria-hidden="true"></i><div><strong>Experience</strong><span>5+ years</span></div></li>
+<li><i class="bi bi-geo-alt" aria-hidden="true"></i><div><strong>Based in</strong><span>Karachi, Pakistan</span></div></li>
+<li><i class="bi bi-envelope" aria-hidden="true"></i><div><strong>Email</strong><span><a href="mailto:mhammad523@gmail.com">mhammad523@gmail.com</a></span></div></li>
+<li><i class="bi bi-lightning-charge" aria-hidden="true"></i><div><strong>Availability</strong><span>Available for freelance</span></div></li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section stats" aria-label="Career highlights">
+  <div class="container stats-grid">
+    <div class="stat-card reveal">
+      <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+      <span class="stat-num" data-count="223">0</span>
+      <p><strong>Happy Clients</strong> — My attitude towards others determines their attitude towards me.</p>
+    </div><div class="stat-card reveal">
+      <i class="bi bi-journal-richtext" aria-hidden="true"></i>
+      <span class="stat-num" data-count="12">0</span>
+      <p><strong>Projects</strong> — Shipped across web, mobile, and AI.</p>
+    </div><div class="stat-card reveal">
+      <i class="bi bi-people" aria-hidden="true"></i>
+      <span class="stat-num" data-count="11">0</span>
+      <p><strong>Sites Deployed</strong> — Fully operational in production.</p>
+    </div><div class="stat-card reveal">
+      <i class="bi bi-headset" aria-hidden="true"></i>
+      <span class="stat-num" data-count="6313">0</span>
+      <p><strong>Hours of Development &amp; Support</strong> — Building the best applications.</p>
+    </div>
+  </div>
+</section>
+<section id="skills" class="section skills" aria-labelledby="skills-title">
+  <div class="container">
+    <p class="eyebrow">Skills</p>
+    <h2 id="skills-title">My <span class="grad-text">Toolbox</span></h2>
+    <div class="skills-rings">
+      <div class="ring-card reveal">
+      <div class="ring" data-val="100" style="--val:0">
+        <span>100%</span>
+      </div>
+      <p>HTML</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="75" style="--val:0">
+        <span>75%</span>
+      </div>
+      <p>CSS</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="95" style="--val:0">
+        <span>95%</span>
+      </div>
+      <p>JavaScript + jQuery</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="100" style="--val:0">
+        <span>100%</span>
+      </div>
+      <p>ASP.NET</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="100" style="--val:0">
+        <span>100%</span>
+      </div>
+      <p>C#</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="85" style="--val:0">
+        <span>85%</span>
+      </div>
+      <p>Python</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="90" style="--val:0">
+        <span>90%</span>
+      </div>
+      <p>Microsoft SQL</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="80" style="--val:0">
+        <span>80%</span>
+      </div>
+      <p>PostgreSQL</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="65" style="--val:0">
+        <span>65%</span>
+      </div>
+      <p>TypeScript</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="80" style="--val:0">
+        <span>80%</span>
+      </div>
+      <p>PHP</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="60" style="--val:0">
+        <span>60%</span>
+      </div>
+      <p>WordPress/CMS</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="90" style="--val:0">
+        <span>90%</span>
+      </div>
+      <p>React JS</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="80" style="--val:0">
+        <span>80%</span>
+      </div>
+      <p>Next JS</p>
+    </div><div class="ring-card reveal">
+      <div class="ring" data-val="85" style="--val:0">
+        <span>85%</span>
+      </div>
+      <p>Photoshop / Illustrator</p>
+    </div>
+    </div>
+    <div class="skill-categories">
+      <div class="chip-group reveal">
+      <h3>Web &amp; Frameworks</h3>
+      <div class="chips"><span class="chip">ASP.NET MVC</span><span class="chip">NopCommerce Framework</span><span class="chip">ASP.NET Core</span><span class="chip">jQuery</span><span class="chip">React</span><span class="chip">SASS</span><span class="chip">Node.js</span><span class="chip">Next.js</span></div>
+    </div><div class="chip-group reveal">
+      <h3>Languages</h3>
+      <div class="chips"><span class="chip">C#</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">Java</span><span class="chip">Swift</span></div>
+    </div><div class="chip-group reveal">
+      <h3>Databases</h3>
+      <div class="chips"><span class="chip">Microsoft SQL Server</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">MySQL</span></div>
+    </div><div class="chip-group reveal">
+      <h3>AI / Machine Learning</h3>
+      <div class="chips"><span class="chip">Ollama</span><span class="chip">Retrieval-Augmented Generation (RAG)</span><span class="chip">LLM Integration</span><span class="chip">Vector Embeddings</span><span class="chip">Qdrant</span></div>
+    </div>
+    </div>
+  </div>
+</section>
+<section id="experience" class="section timeline-section" aria-labelledby="exp-title">
+  <div class="container">
+    <p class="eyebrow">Career</p>
+    <h2 id="exp-title">Experience &amp; <span class="grad-text">Education</span></h2>
+    <div class="timeline">
+      <div class="timeline-item is-current reveal">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <h3>Current Role — Associate Web Developer → Team Lead (Logistics)</h3>
+        <div class="timeline-head"><span class="timeline-dates">2025 — Present</span><span class="current-badge">Current</span></div>
+        <div class="timeline-company">NopCommerceTemplate / Interforce Web Development</div>
+        <ul class="timeline-highlights"><li>Leading a small development team under the Technical Lead, coordinating the design, implementation, and delivery of logistics-related features.</li><li>Refactored and rebuilt the entire Visualization module, redesigning its architecture and data flow to achieve up to a 3000x performance improvement while significantly simplifying the overall structure.</li><li>Led the development of numerous stock and inventory management enhancements, improving system performance, maintainability, and user workflows.</li><li>Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems.</li><li>Also shipped and continue to maintain CraigMarloch, Navigate North, and PlantBeeb — full websites (and companion apps) used daily by real customers.</li><li>Continue mentoring junior developers, reviewing code, and driving technical improvements across logistics-focused projects.</li></ul>
+        <p class="also-worked"><strong>Also shipped:</strong></p><div class="spotlight-chips"><span class="tech-chip">Interforce Reward Exchange</span></div>
+      <div class="spotlight">
+      <div class="spotlight-inner">
+        <div class="spotlight-head">
+          <div class="icon-badge"><i class="bi bi-shield-lock" aria-hidden="true"></i></div>
+          <div>
+            <div class="spotlight-tag">Flagship Project</div>
+            <h3>Fully Offline, Secure AI Chatbot for Private Client Data</h3>
+          </div>
+        </div>
+        <p class="spotlight-summary">Designed and built an end-to-end, fully offline and self-hosted AI chatbot that lets a client query their own private business data without any information ever leaving their infrastructure, built for organizations with strict data-privacy, compliance, and security requirements.</p>
+        <div class="spotlight-chips"><span class="tech-chip">.NET</span><span class="tech-chip">Python</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Qdrant</span><span class="tech-chip">Ollama</span><span class="tech-chip">RAG</span></div>
+        <div class="spotlight-details"><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Architecture</div>
+        <p>Designed a Retrieval-Augmented Generation (RAG) pipeline running entirely on-premises, with zero external API calls or third-party data transmission.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Local LLM Inference</div>
+        <p>Integrated Ollama to run open-source large language models locally, giving the client full control over the model, its behavior, and its data footprint.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Backend &amp; Orchestration</div>
+        <p>Built the core API, chat session management, and access-control layer in .NET, exposing secure endpoints for document ingestion, chat, and administration.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Data &amp; Embedding Pipeline</div>
+        <p>Developed the document processing pipeline in Python, parsing, chunking, and embedding client documents for semantic retrieval.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Vector Storage</div>
+        <p>Used a self-hosted Qdrant instance as the dedicated vector store for embeddings, alongside PostgreSQL for chat history and document metadata, keeping the entire pipeline on-premises with no external vector-database dependency.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Security &amp; Compliance</div>
+        <p>Delivered a fully air-gapped-capable deployment model, ensuring complete confidentiality of sensitive client data and satisfying internal security review requirements.</p>
+      </div><div class="detail-card">
+        <div class="detail-area"><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Outcome</div>
+        <p>Gave the client a production-ready, private AI assistant over their own knowledge base, with no recurring API costs and no third-party data exposure.</p>
+      </div></div>
+      </div>
+    </div>
+    </div><div class="timeline-item reveal">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <h3>Team Leader</h3>
+        <div class="timeline-head"><span class="timeline-dates">Nov 2018 — Apr 2021</span></div>
+        <div class="timeline-company">Aptech E-Projects</div>
+        <ul class="project-list"><li>School Administration Website</li><li>Cake Shop E-Commerce Website</li><li>Gift Shop E-Commerce Website</li><li>Tourism Management System</li><li>Farm Management System</li></ul>
+      
+    </div>
+    </div>
+    <div class="education-grid">
+      <div class="edu-card reveal">
+      <h4>ACCP-EE Diploma</h4>
+      <div class="edu-dates">Aptech · Aug 2018 – Aug 2021</div>
+      <ul><li>Certificate of Proficiency in Information Systems Management</li><li>Diploma in Information Systems Management</li><li>Higher Diploma in Software Engineering</li></ul>
+    </div><div class="edu-card reveal">
+      <h4>AS &amp; A Levels</h4>
+      <div class="edu-dates">Private Cambridge · Sep 2019 – Nov 2021</div>
+      <ul><li>Physics</li><li>Mathematics</li><li>Computer Science</li></ul>
+    </div><div class="edu-card reveal">
+      <h4>IGCSE / High School Diploma</h4>
+      <div class="edu-dates">The Oxford School, Dubai · Sep 2015 – Aug 2018</div>
+      <ul><li>English</li><li>Physics</li><li>Chemistry</li><li>Mathematics</li><li>Computer Science</li></ul>
+    </div>
+    </div>
+  </div>
+</section>
+<section id="work" class="section portfolio" aria-labelledby="work-title">
+  <div class="container">
+    <p class="eyebrow">Selected Work</p>
+    <h2 id="work-title">Projects I've <span class="grad-text">Shipped</span></h2>
+    <div class="filter-pills" role="tablist" aria-label="Filter projects">
+      <button class="pill active" data-filter="all" type="button">All</button>
+<button class="pill" data-filter="Aerport" type="button">Aerport Web Application</button>
+<button class="pill" data-filter="CraigMarloch" type="button">Craig Marloch Store</button>
+<button class="pill" data-filter="NavigateNorth" type="button">Navigate North</button>
+<button class="pill" data-filter="PlantBeeb" type="button">PlantBeeb</button>
+<button class="pill" data-filter="VDHSolar" type="button">VDH Solar</button>
+
+    </div>
+    <div class="work-grid">
+      <article class="work-card reveal" data-cat="Aerport">
+      <button class="work-thumb" type="button" data-images='[&quot;assets/img/portfolio/Aerport/Aerport.jpg&quot;, &quot;assets/img/portfolio/Aerport/Visualization.jpg&quot;, &quot;assets/img/portfolio/Aerport/PurchaseInvoice.jpg&quot;, &quot;assets/img/portfolio/Aerport/Approval.jpg&quot;, &quot;assets/img/portfolio/Aerport/Approval2.jpg&quot;, &quot;assets/img/portfolio/Aerport/BudgetLimit.jpg&quot;, &quot;assets/img/portfolio/Aerport/PowerBi.jpg&quot;, &quot;assets/img/portfolio/Aerport/Kanban.jpg&quot;, &quot;assets/img/portfolio/Aerport/Correction.jpg&quot;]' data-title="Aerport Web Application" aria-label="Open Aerport Web Application gallery">
+        <img src="assets/img/portfolio/Aerport/Aerport.jpg" alt="Aerport Web Application screenshot" width="1600" height="835" loading="lazy" decoding="async">
+        <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery (9)</span>
+      </button>
+      <div class="work-info">
+        <h3>Aerport Web Application</h3>
+        <p>Created a new module for handling invoices with connections to Exact and Twinfield accounting applications.</p>
+        <span class="work-tag">Internal system</span>
+      </div>
+    </article><article class="work-card reveal" data-cat="CraigMarloch">
+      <button class="work-thumb" type="button" data-images='[&quot;assets/img/portfolio/CraigMarloch/craigmarloch.direct_.jpg&quot;, &quot;assets/img/portfolio/CraigMarloch/craigmarloch.direct_Admin.jpg&quot;, &quot;assets/img/portfolio/CraigMarloch/craigmarloch.direct_Admin_Product_Edit_3994.jpg&quot;, &quot;assets/img/portfolio/CraigMarloch/craigmarloch.direct_bundledeals.jpg&quot;, &quot;assets/img/portfolio/CraigMarloch/craigmarloch.direct_cart.jpg&quot;]' data-title="Craig Marloch Store" aria-label="Open Craig Marloch Store gallery">
+        <img src="assets/img/portfolio/CraigMarloch/craigmarloch.direct_.jpg" alt="Craig Marloch Store screenshot" width="1600" height="5315" loading="lazy" decoding="async">
+        <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery (5)</span>
+      </button>
+      <div class="work-info">
+        <h3>Craig Marloch Store</h3>
+        <p>Built the logic for importing products from the Floriday API.</p>
+        <a class="work-link" href="http://craigmarloch.direct/" target="_blank" rel="noopener">Visit live <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </article><article class="work-card reveal" data-cat="NavigateNorth">
+      <button class="work-thumb" type="button" data-images='[&quot;assets/img/portfolio/NavigateNorth/Dashboard.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/EditionDetail.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/EditionTeams.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Edition.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Trail.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Trail2.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Map.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/GPSData.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Result.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/ResultScreen.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Resutls2.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/DayResult.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/Settings.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/StageDetail.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/StageResult.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/StageTeamJourney.jpg&quot;, &quot;assets/img/portfolio/NavigateNorth/StageTeamJourney2.jpg&quot;]' data-title="Navigate North" aria-label="Open Navigate North gallery">
+        <img src="assets/img/portfolio/NavigateNorth/Dashboard.jpg" alt="Navigate North screenshot" width="1599" height="899" loading="lazy" decoding="async">
+        <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery (17)</span>
+      </button>
+      <div class="work-info">
+        <h3>Navigate North</h3>
+        <p>Designed and developed software solutions for race navigation.</p>
+        <a class="work-link" href="https://navigatenorth.nl/" target="_blank" rel="noopener">Visit live <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </article><article class="work-card reveal" data-cat="PlantBeeb">
+      <button class="work-thumb" type="button" data-images='[&quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_30031.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin_OpenAI_CareTipRequestLog.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin_Report_GardenCenterScanHistorySummary.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_locations.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_search_q=acer.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_specialists.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/plantbeeb.com_plantbeeb-qr-code-2.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/Account.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/Chatbot.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/ImageRecognition.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/Location.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/Product.jpg&quot;, &quot;assets/img/portfolio/PlantBeeb/QRScanner.jpg&quot;]' data-title="PlantBeeb" aria-label="Open PlantBeeb gallery">
+        <img src="assets/img/portfolio/PlantBeeb/plantbeeb.com_.jpg" alt="PlantBeeb screenshot" width="1600" height="2571" loading="lazy" decoding="async">
+        <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery (15)</span>
+      </button>
+      <div class="work-info">
+        <h3>PlantBeeb</h3>
+        <p>Played a key role in developing a plant encyclopedia encompassing a vast repository of botanical information and multimedia content.</p>
+        <a class="work-link" href="https://plantbeeb.com" target="_blank" rel="noopener">Visit live <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </article><article class="work-card reveal" data-cat="VDHSolar">
+      <button class="work-thumb" type="button" data-images='[&quot;assets/img/portfolio/VDH/vdh-solar.nl_.jpg&quot;, &quot;assets/img/portfolio/VDH/vdh-solar.nl_onzemerken.jpg&quot;, &quot;assets/img/portfolio/VDH/vdh-solar.nl_c-inverters.jpg&quot;]' data-title="VDH Solar" aria-label="Open VDH Solar gallery">
+        <img src="assets/img/portfolio/VDH/vdh-solar.nl_.jpg" alt="VDH Solar screenshot" width="1600" height="3525" loading="lazy" decoding="async">
+        <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery (3)</span>
+      </button>
+      <div class="work-info">
+        <h3>VDH Solar</h3>
+        <p>Built and maintained the corporate website for VDH Solar, a solar energy solutions provider.</p>
+        <a class="work-link" href="http://vdh-solar.nl/" target="_blank" rel="noopener">Visit live <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+  <div class="container contact-inner">
+    <p class="eyebrow">Contact</p>
+    <h2 id="contact-title">Let's build something <span class="grad-text">great together</span>.</h2>
+    <p>Have a project, a role, or an idea you want to talk through? My inbox is open — I usually reply within a day.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:mhammad523@gmail.com">
+      <i class="bi bi-envelope" aria-hidden="true"></i><div><strong>Email</strong><span>mhammad523@gmail.com</span></div>
+    </a><a class="contact-card" href="tel:+92 328 3041264">
+      <i class="bi bi-telephone" aria-hidden="true"></i><div><strong>Phone</strong><span>+92 328 3041264</span></div>
+    </a><div class="contact-card">
+      <i class="bi bi-geo-alt" aria-hidden="true"></i><div><strong>Location</strong><span>Karachi, Pakistan</span></div>
+    </div><a class="contact-card" href="https://github.com/MHammad523/Portafolio" target="_blank" rel="noopener">
+      <i class="bi bi-github" aria-hidden="true"></i><div><strong>Github</strong><span>View profile</span></div>
+    </a><a class="contact-card" href="https://www.behance.net/rdasher" target="_blank" rel="noopener">
+      <i class="bi bi-behance" aria-hidden="true"></i><div><strong>Behance</strong><span>View profile</span></div>
+    </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Muhammad Hammad. All rights reserved.</p>
+    <a href="#top" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  <button class="lightbox-prev" type="button" aria-label="Previous image"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+  <div>
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+  </div>
+  <button class="lightbox-next" type="button" aria-label="Next image"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+</div>
+
+<noscript><div class="noscript-banner">This page works without JavaScript — enable it for theme switching, the project gallery, and a few animations.</div></noscript>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

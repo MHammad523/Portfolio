@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Hammad — Resume</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  :root {
+    --paper: #faf9f6;
+    --ink: #16181d;
+    --ink-soft: #52565f;
+    --muted: #8b8f99;
+    --accent: #3373a3;
+    --accent-tint: rgba(51, 115, 163, 0.07);
+    --line: #e7ecef;
+    --line-strong: #dbe3e8;
+    --rail-bg: #f2f6f9;
+    --rail-line: rgba(22, 24, 29, 0.09);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e9e7e1;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  .print-hint {
+    max-width: 210mm;
+    margin: 6mm auto 0;
+    padding: 3mm 5mm;
+    background: #fff7d6;
+    border: 1px solid #e8d27a;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #4a3f10;
+  }
+  .print-hint b { color: #2a2400; }
+
+  .page-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 6mm 0 12mm;
+  }
+
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    background: var(--paper);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+    overflow: hidden;
+    color: var(--ink);
+  }
+
+  /* ---------- full-height colored rail column ---------- */
+  .rail {
+    position: absolute;
+    top: 0; left: 0;
+    width: 68mm;
+    height: 297mm;
+    background: var(--rail-bg);
+    border-right: 1px solid var(--line-strong);
+    padding: 17mm 8mm 13mm 15mm;
+  }
+
+  /* ---------- white main column ---------- */
+  .main-col {
+    position: absolute;
+    top: 0; left: 68mm; right: 0;
+    height: 297mm;
+    padding: 17mm 15mm 13mm 13mm;
+  }
+
+  /* ---------- header ---------- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 6mm;
+  }
+  .name {
+    font-size: 26pt;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    margin: 0 0 2mm;
+  }
+  .name .last { color: var(--accent); font-weight: 700; }
+  .titles {
+    font-size: 7.6pt;
+    letter-spacing: 1.4px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .contact-block {
+    text-align: right;
+    font-size: 7.6pt;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    white-space: nowrap;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 2mm;
+    padding: 1mm 2.6mm;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 6.6pt;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .rule {
+    position: relative;
+    margin: 4mm 0 6mm;
+    border-top: 1px solid var(--line-strong);
+  }
+  .rule::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: 0;
+    width: 16mm;
+    border-top: 2px solid var(--accent);
+  }
+
+  .rail-label, h2.section {
+    font-size: 7.4pt;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 700;
+    margin: 0 0 2.4mm;
+  }
+  .rail-block { margin-bottom: 6mm; }
+  .rail-block h2.section {
+    padding-bottom: 1.4mm;
+    border-bottom: 1px solid var(--rail-line);
+  }
+
+  .skill-group { margin-bottom: 3.4mm; }
+  .skill-group .rail-label {
+    font-size: 6.7pt;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 1.6mm;
+  }
+  .chip-wrap { display: flex; flex-wrap: wrap; gap: 1.3mm; }
+  .skill-chip {
+    font-size: 6.9pt;
+    padding: 0.9mm 2mm;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    color: var(--ink-soft);
+    line-height: 1.3;
+    background: #ffffff;
+  }
+
+  .edu-item { margin-bottom: 3.4mm; }
+  .edu-top { display: flex; justify-content: space-between; gap: 2mm; align-items: baseline; }
+  .edu-title { font-size: 7.6pt; font-weight: 700; color: var(--ink); line-height: 1.3; }
+  .edu-date { font-size: 6.6pt; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+  .edu-sub { font-size: 6.9pt; color: var(--ink-soft); margin-top: 0.8mm; line-height: 1.35; }
+
+  .qr-block {
+    margin-top: 2mm;
+    padding-top: 4mm;
+    border-top: 1px solid var(--rail-line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4mm;
+    text-align: center;
+  }
+  .qr-frame {
+    border: 1px solid var(--rail-line);
+    border-radius: 2px;
+    padding: 1.4mm;
+    line-height: 0;
+    background: #ffffff;
+  }
+  .qr-text .qr-title {
+    font-size: 7.2pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ---------- experience (main column) ---------- */
+  .job { margin-bottom: 3.6mm; }
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .job-role { font-size: 9.4pt; font-weight: 700; color: var(--ink); }
+  .job-dates { font-size: 6.8pt; color: var(--muted); white-space: nowrap; }
+  .job-company { font-size: 7.6pt; color: var(--accent); font-weight: 600; margin: 0.4mm 0 1.8mm; }
+
+  ul.bullets {
+    margin: 0 0 2mm;
+    padding-left: 3.4mm;
+    font-size: 7.3pt;
+    line-height: 1.48;
+    color: var(--ink-soft);
+  }
+  ul.bullets li { margin-bottom: 0.6mm; }
+  ul.bullets li::marker { color: var(--accent); }
+
+  .callout {
+    margin: 2.4mm 0;
+    padding: 2.6mm 3.4mm;
+    border-left: 2px solid var(--accent);
+    background: var(--accent-tint);
+    border-radius: 0 3px 3px 0;
+  }
+  .callout .callout-label {
+    font-size: 6.6pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 1mm;
+  }
+  .callout .callout-name {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1mm;
+  }
+  .callout p {
+    font-size: 7.2pt;
+    line-height: 1.48;
+    color: var(--ink-soft);
+    margin: 0 0 1.8mm;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 6.4pt;
+    padding: 0.7mm 1.7mm;
+    margin: 0 0.8mm 0.8mm 0;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    color: var(--ink-soft);
+    background: #ffffff;
+  }
+
+  .also-label {
+    font-size: 6.8pt;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.2mm 0 1.2mm;
+  }
+  ul.proj-list {
+    margin: 0;
+    padding-left: 3.4mm;
+    font-size: 7.1pt;
+    line-height: 1.48;
+    color: var(--ink-soft);
+  }
+  ul.proj-list li { margin-bottom: 0.6mm; }
+  ul.proj-list li::marker { color: var(--accent); }
+  ul.proj-list b { color: var(--ink); }
+
+  @media print {
+    html, body { background: #fff; }
+    .print-hint { display: none; }
+    .page-wrap { padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="print-hint">
+    <b>To export as PDF:</b> File &rarr; Print (or Cmd/Ctrl+P) &rarr; Destination: "Save as PDF" &rarr;
+    Margins: None &rarr; Background graphics: on (optional — this design is built to look great even without it, for clean black &amp; white printing).
+    This page is sized exactly to A4 (210 &times; 297mm), one page. This banner will not appear in the exported PDF.
+  </div>
+
+  <div class="page-wrap">
+    <div class="page">
+
+      <div class="rail">
+
+        <div class="rail-block">
+          <h2 class="section">Skills</h2>
+          <div class="skill-group"><div class="rail-label">Languages</div><div class="chip-wrap"><span class="skill-chip">C#</span><span class="skill-chip">JavaScript</span><span class="skill-chip">TypeScript</span><span class="skill-chip">Python</span><span class="skill-chip">C/C++</span><span class="skill-chip">Java</span><span class="skill-chip">Swift</span></div></div><div class="skill-group"><div class="rail-label">Web &amp; Frameworks</div><div class="chip-wrap"><span class="skill-chip">ASP.NET MVC</span><span class="skill-chip">NopCommerce Framework</span><span class="skill-chip">ASP.NET Core</span><span class="skill-chip">jQuery</span><span class="skill-chip">React</span><span class="skill-chip">SASS</span><span class="skill-chip">Node.js</span><span class="skill-chip">Next.js</span></div></div><div class="skill-group"><div class="rail-label">Databases</div><div class="chip-wrap"><span class="skill-chip">Microsoft SQL Server</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">MongoDB</span><span class="skill-chip">MySQL</span></div></div><div class="skill-group"><div class="rail-label">AI / ML</div><div class="chip-wrap"><span class="skill-chip">Ollama</span><span class="skill-chip">Retrieval-Augmented Generation (RAG)</span><span class="skill-chip">LLM Integration</span><span class="skill-chip">Vector Embeddings</span><span class="skill-chip">Qdrant</span></div></div>
+        </div>
+
+        <div class="rail-block">
+          <h2 class="section">Education</h2>
+          
+        <div class="edu-item">
+          <div class="edu-top"><span class="edu-title">ACCP-EE Diploma — Aptech</span><span class="edu-date">2018 – 2021</span></div>
+          <div class="edu-sub">Certificate of Proficiency in Information Systems Management, Diploma in Information Systems Management, Higher Diploma in Software Engineering</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-top"><span class="edu-title">AS &amp; A Levels — Private Cambridge</span><span class="edu-date">2019 – 2021</span></div>
+          <div class="edu-sub">Physics, Mathematics, Computer Science</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-top"><span class="edu-title">IGCSE / High School Diploma — The Oxford School, Dubai</span><span class="edu-date">2015 – 2018</span></div>
+          <div class="edu-sub">English, Physics, Chemistry, Mathematics, Computer Science</div>
+        </div>
+        </div>
+
+        <div class="qr-block">
+          <div class="qr-frame"><svg viewBox="0 0 29 29" width="30mm" height="30mm" shape-rendering="crispEdges" role="img" aria-label="QR code linking to https://melodic-fox-416913.netlify.app/"><rect x="0" y="0" width="29" height="29" fill="#ffffff"/><g fill="#16181d"><rect x="0" y="0" width="1" height="1"/><rect x="1" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="9" y="0" width="1" height="1"/><rect x="14" y="0" width="1" height="1"/><rect x="16" y="0" width="1" height="1"/><rect x="19" y="0" width="1" height="1"/><rect x="22" y="0" width="1" height="1"/><rect x="23" y="0" width="1" height="1"/><rect x="24" y="0" width="1" height="1"/><rect x="25" y="0" width="1" height="1"/><rect x="26" y="0" width="1" height="1"/><rect x="27" y="0" width="1" height="1"/><rect x="28" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="12" y="1" width="1" height="1"/><rect x="15" y="1" width="1" height="1"/><rect x="16" y="1" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="20" y="1" width="1" height="1"/><rect x="22" y="1" width="1" height="1"/><rect x="28" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="11" y="2" width="1" height="1"/><rect x="15" y="2" width="1" height="1"/><rect x="18" y="2" width="1" height="1"/><rect x="22" y="2" width="1" height="1"/><rect x="24" y="2" width="1" height="1"/><rect x="25" y="2" width="1" height="1"/><rect x="26" y="2" width="1" height="1"/><rect x="28" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="11" y="3" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="14" y="3" width="1" height="1"/><rect x="15" y="3" width="1" height="1"/><rect x="17" y="3" width="1" height="1"/><rect x="18" y="3" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/><rect x="22" y="3" width="1" height="1"/><rect x="24" y="3" width="1" height="1"/><rect x="25" y="3" width="1" height="1"/><rect x="26" y="3" width="1" height="1"/><rect x="28" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="10" y="4" width="1" height="1"/><rect x="12" y="4" width="1" height="1"/><rect x="14" y="4" width="1" height="1"/><rect x="16" y="4" width="1" height="1"/><rect x="17" y="4" width="1" height="1"/><rect x="19" y="4" width="1" height="1"/><rect x="22" y="4" width="1" height="1"/><rect x="24" y="4" width="1" height="1"/><rect x="25" y="4" width="1" height="1"/><rect x="26" y="4" width="1" height="1"/><rect x="28" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="10" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="18" y="5" width="1" height="1"/><rect x="22" y="5" width="1" height="1"/><rect x="28" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/><rect x="12" y="6" width="1" height="1"/><rect x="14" y="6" width="1" height="1"/><rect x="16" y="6" width="1" height="1"/><rect x="18" y="6" width="1" height="1"/><rect x="20" y="6" width="1" height="1"/><rect x="22" y="6" width="1" height="1"/><rect x="23" y="6" width="1" height="1"/><rect x="24" y="6" width="1" height="1"/><rect x="25" y="6" width="1" height="1"/><rect x="26" y="6" width="1" height="1"/><rect x="27" y="6" width="1" height="1"/><rect x="28" y="6" width="1" height="1"/><rect x="12" y="7" width="1" height="1"/><rect x="16" y="7" width="1" height="1"/><rect x="20" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="2" y="8" width="1" height="1"/><rect x="3" y="8" width="1" height="1"/><rect x="4" y="8" width="1" height="1"/><rect x="6" y="8" width="1" height="1"/><rect x="7" y="8" width="1" height="1"/><rect x="8" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="13" y="8" width="1" height="1"/><rect x="17" y="8" width="1" height="1"/><rect x="18" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="21" y="8" width="1" height="1"/><rect x="23" y="8" width="1" height="1"/><rect x="25" y="8" width="1" height="1"/><rect x="27" y="8" width="1" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="1" y="9" width="1" height="1"/><rect x="3" y="9" width="1" height="1"/><rect x="4" y="9" width="1" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="21" y="9" width="1" height="1"/><rect x="22" y="9" width="1" height="1"/><rect x="23" y="9" width="1" height="1"/><rect x="24" y="9" width="1" height="1"/><rect x="28" y="9" width="1" height="1"/><rect x="3" y="10" width="1" height="1"/><rect x="5" y="10" width="1" height="1"/><rect x="6" y="10" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/><rect x="9" y="10" width="1" height="1"/><rect x="11" y="10" width="1" height="1"/><rect x="12" y="10" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="20" y="10" width="1" height="1"/><rect x="23" y="10" width="1" height="1"/><rect x="0" y="11" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="8" y="11" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="10" y="11" width="1" height="1"/><rect x="11" y="11" width="1" height="1"/><rect x="14" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="20" y="11" width="1" height="1"/><rect x="21" y="11" width="1" height="1"/><rect x="23" y="11" width="1" height="1"/><rect x="25" y="11" width="1" height="1"/><rect x="27" y="11" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="7" y="12" width="1" height="1"/><rect x="8" y="12" width="1" height="1"/><rect x="9" y="12" width="1" height="1"/><rect x="11" y="12" width="1" height="1"/><rect x="16" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="19" y="12" width="1" height="1"/><rect x="25" y="12" width="1" height="1"/><rect x="26" y="12" width="1" height="1"/><rect x="3" y="13" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/><rect x="8" y="13" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/><rect x="12" y="13" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="19" y="13" width="1" height="1"/><rect x="21" y="13" width="1" height="1"/><rect x="22" y="13" width="1" height="1"/><rect x="23" y="13" width="1" height="1"/><rect x="24" y="13" width="1" height="1"/><rect x="28" y="13" width="1" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="2" y="14" width="1" height="1"/><rect x="3" y="14" width="1" height="1"/><rect x="6" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="8" y="14" width="1" height="1"/><rect x="10" y="14" width="1" height="1"/><rect x="13" y="14" width="1" height="1"/><rect x="14" y="14" width="1" height="1"/><rect x="15" y="14" width="1" height="1"/><rect x="17" y="14" width="1" height="1"/><rect x="18" y="14" width="1" height="1"/><rect x="21" y="14" width="1" height="1"/><rect x="22" y="14" width="1" height="1"/><rect x="24" y="14" width="1" height="1"/><rect x="25" y="14" width="1" height="1"/><rect x="26" y="14" width="1" height="1"/><rect x="0" y="15" width="1" height="1"/><rect x="4" y="15" width="1" height="1"/><rect x="5" y="15" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="10" y="15" width="1" height="1"/><rect x="12" y="15" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="16" y="15" width="1" height="1"/><rect x="23" y="15" width="1" height="1"/><rect x="27" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="6" y="16" width="1" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="8" y="16" width="1" height="1"/><rect x="10" y="16" width="1" height="1"/><rect x="12" y="16" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="15" y="16" width="1" height="1"/><rect x="17" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="19" y="16" width="1" height="1"/><rect x="20" y="16" width="1" height="1"/><rect x="25" y="16" width="1" height="1"/><rect x="26" y="16" width="1" height="1"/><rect x="0" y="17" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="1" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="9" y="17" width="1" height="1"/><rect x="16" y="17" width="1" height="1"/><rect x="17" y="17" width="1" height="1"/><rect x="18" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="20" y="17" width="1" height="1"/><rect x="21" y="17" width="1" height="1"/><rect x="22" y="17" width="1" height="1"/><rect x="23" y="17" width="1" height="1"/><rect x="24" y="17" width="1" height="1"/><rect x="26" y="17" width="1" height="1"/><rect x="28" y="17" width="1" height="1"/><rect x="0" y="18" width="1" height="1"/><rect x="3" y="18" width="1" height="1"/><rect x="6" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="9" y="18" width="1" height="1"/><rect x="11" y="18" width="1" height="1"/><rect x="12" y="18" width="1" height="1"/><rect x="15" y="18" width="1" height="1"/><rect x="16" y="18" width="1" height="1"/><rect x="17" y="18" width="1" height="1"/><rect x="20" y="18" width="1" height="1"/><rect x="21" y="18" width="1" height="1"/><rect x="23" y="18" width="1" height="1"/><rect x="24" y="18" width="1" height="1"/><rect x="26" y="18" width="1" height="1"/><rect x="0" y="19" width="1" height="1"/><rect x="7" y="19" width="1" height="1"/><rect x="8" y="19" width="1" height="1"/><rect x="10" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="14" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/><rect x="19" y="19" width="1" height="1"/><rect x="20" y="19" width="1" height="1"/><rect x="22" y="19" width="1" height="1"/><rect x="23" y="19" width="1" height="1"/><rect x="24" y="19" width="1" height="1"/><rect x="27" y="19" width="1" height="1"/><rect x="0" y="20" width="1" height="1"/><rect x="2" y="20" width="1" height="1"/><rect x="3" y="20" width="1" height="1"/><rect x="4" y="20" width="1" height="1"/><rect x="5" y="20" width="1" height="1"/><rect x="6" y="20" width="1" height="1"/><rect x="7" y="20" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="9" y="20" width="1" height="1"/><rect x="10" y="20" width="1" height="1"/><rect x="11" y="20" width="1" height="1"/><rect x="17" y="20" width="1" height="1"/><rect x="19" y="20" width="1" height="1"/><rect x="20" y="20" width="1" height="1"/><rect x="21" y="20" width="1" height="1"/><rect x="22" y="20" width="1" height="1"/><rect x="23" y="20" width="1" height="1"/><rect x="24" y="20" width="1" height="1"/><rect x="26" y="20" width="1" height="1"/><rect x="27" y="20" width="1" height="1"/><rect x="28" y="20" width="1" height="1"/><rect x="8" y="21" width="1" height="1"/><rect x="12" y="21" width="1" height="1"/><rect x="13" y="21" width="1" height="1"/><rect x="14" y="21" width="1" height="1"/><rect x="16" y="21" width="1" height="1"/><rect x="17" y="21" width="1" height="1"/><rect x="18" y="21" width="1" height="1"/><rect x="20" y="21" width="1" height="1"/><rect x="24" y="21" width="1" height="1"/><rect x="25" y="21" width="1" height="1"/><rect x="26" y="21" width="1" height="1"/><rect x="27" y="21" width="1" height="1"/><rect x="28" y="21" width="1" height="1"/><rect x="0" y="22" width="1" height="1"/><rect x="1" y="22" width="1" height="1"/><rect x="2" y="22" width="1" height="1"/><rect x="3" y="22" width="1" height="1"/><rect x="4" y="22" width="1" height="1"/><rect x="5" y="22" width="1" height="1"/><rect x="6" y="22" width="1" height="1"/><rect x="8" y="22" width="1" height="1"/><rect x="10" y="22" width="1" height="1"/><rect x="13" y="22" width="1" height="1"/><rect x="14" y="22" width="1" height="1"/><rect x="15" y="22" width="1" height="1"/><rect x="17" y="22" width="1" height="1"/><rect x="19" y="22" width="1" height="1"/><rect x="20" y="22" width="1" height="1"/><rect x="22" y="22" width="1" height="1"/><rect x="24" y="22" width="1" height="1"/><rect x="25" y="22" width="1" height="1"/><rect x="26" y="22" width="1" height="1"/><rect x="0" y="23" width="1" height="1"/><rect x="6" y="23" width="1" height="1"/><rect x="12" y="23" width="1" height="1"/><rect x="13" y="23" width="1" height="1"/><rect x="15" y="23" width="1" height="1"/><rect x="16" y="23" width="1" height="1"/><rect x="18" y="23" width="1" height="1"/><rect x="19" y="23" width="1" height="1"/><rect x="20" y="23" width="1" height="1"/><rect x="24" y="23" width="1" height="1"/><rect x="28" y="23" width="1" height="1"/><rect x="0" y="24" width="1" height="1"/><rect x="2" y="24" width="1" height="1"/><rect x="3" y="24" width="1" height="1"/><rect x="4" y="24" width="1" height="1"/><rect x="6" y="24" width="1" height="1"/><rect x="8" y="24" width="1" height="1"/><rect x="9" y="24" width="1" height="1"/><rect x="10" y="24" width="1" height="1"/><rect x="12" y="24" width="1" height="1"/><rect x="14" y="24" width="1" height="1"/><rect x="17" y="24" width="1" height="1"/><rect x="20" y="24" width="1" height="1"/><rect x="21" y="24" width="1" height="1"/><rect x="22" y="24" width="1" height="1"/><rect x="23" y="24" width="1" height="1"/><rect x="24" y="24" width="1" height="1"/><rect x="26" y="24" width="1" height="1"/><rect x="0" y="25" width="1" height="1"/><rect x="2" y="25" width="1" height="1"/><rect x="3" y="25" width="1" height="1"/><rect x="4" y="25" width="1" height="1"/><rect x="6" y="25" width="1" height="1"/><rect x="8" y="25" width="1" height="1"/><rect x="9" y="25" width="1" height="1"/><rect x="10" y="25" width="1" height="1"/><rect x="16" y="25" width="1" height="1"/><rect x="18" y="25" width="1" height="1"/><rect x="20" y="25" width="1" height="1"/><rect x="21" y="25" width="1" height="1"/><rect x="25" y="25" width="1" height="1"/><rect x="26" y="25" width="1" height="1"/><rect x="27" y="25" width="1" height="1"/><rect x="28" y="25" width="1" height="1"/><rect x="0" y="26" width="1" height="1"/><rect x="2" y="26" width="1" height="1"/><rect x="3" y="26" width="1" height="1"/><rect x="4" y="26" width="1" height="1"/><rect x="6" y="26" width="1" height="1"/><rect x="8" y="26" width="1" height="1"/><rect x="10" y="26" width="1" height="1"/><rect x="11" y="26" width="1" height="1"/><rect x="12" y="26" width="1" height="1"/><rect x="15" y="26" width="1" height="1"/><rect x="19" y="26" width="1" height="1"/><rect x="21" y="26" width="1" height="1"/><rect x="22" y="26" width="1" height="1"/><rect x="23" y="26" width="1" height="1"/><rect x="24" y="26" width="1" height="1"/><rect x="25" y="26" width="1" height="1"/><rect x="26" y="26" width="1" height="1"/><rect x="27" y="26" width="1" height="1"/><rect x="0" y="27" width="1" height="1"/><rect x="6" y="27" width="1" height="1"/><rect x="8" y="27" width="1" height="1"/><rect x="11" y="27" width="1" height="1"/><rect x="14" y="27" width="1" height="1"/><rect x="15" y="27" width="1" height="1"/><rect x="16" y="27" width="1" height="1"/><rect x="20" y="27" width="1" height="1"/><rect x="22" y="27" width="1" height="1"/><rect x="23" y="27" width="1" height="1"/><rect x="24" y="27" width="1" height="1"/><rect x="25" y="27" width="1" height="1"/><rect x="27" y="27" width="1" height="1"/><rect x="0" y="28" width="1" height="1"/><rect x="1" y="28" width="1" height="1"/><rect x="2" y="28" width="1" height="1"/><rect x="3" y="28" width="1" height="1"/><rect x="4" y="28" width="1" height="1"/><rect x="5" y="28" width="1" height="1"/><rect x="6" y="28" width="1" height="1"/><rect x="8" y="28" width="1" height="1"/><rect x="10" y="28" width="1" height="1"/><rect x="11" y="28" width="1" height="1"/><rect x="15" y="28" width="1" height="1"/><rect x="16" y="28" width="1" height="1"/><rect x="17" y="28" width="1" height="1"/><rect x="19" y="28" width="1" height="1"/><rect x="23" y="28" width="1" height="1"/><rect x="26" y="28" width="1" height="1"/></g></svg></div>
+          <div class="qr-text">
+            <div class="qr-title">View live portfolio</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="main-col">
+
+        <div class="header">
+          <div>
+            <div class="name">Muhammad <span class="last">Hammad</span></div>
+            <div class="titles">WEB DEVELOPER &nbsp;/&nbsp; C#/PYTHON PROGRAMMER &nbsp;/&nbsp; DATABASE ADMINISTRATOR</div>
+          </div>
+          <div class="contact-block">
+            <div>mhammad523@gmail.com</div>
+            <div>+92 328 3041264</div>
+            <div>Karachi, Pakistan</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <h2 class="section">Experience</h2>
+
+        <div class="job">
+          <div class="job-top">
+            <span class="job-role">Current Role</span>
+            <span class="job-dates">Aug 2021 – Present</span>
+          </div>
+          <div class="job-company">NopCommerceTemplate / Interforce Web Development</div>
+          <ul class="bullets">
+            <li>Leading a small development team under the Technical Lead, coordinating the design, implementation, and delivery of logistics-related features.</li><li>Refactored and rebuilt the entire Visualization module, redesigning its architecture and data flow to achieve up to a 3000x performance improvement while significantly simplifying the overall structure.</li><li>Led the development of numerous stock and inventory management enhancements, improving system performance, maintainability, and user workflows.</li><li>Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems.</li><li>Also shipped and continue to maintain CraigMarloch, Navigate North, and PlantBeeb — full websites (and companion apps) used daily by real customers.</li><li>Continue mentoring junior developers, reviewing code, and driving technical improvements across logistics-focused projects.</li>
+          </ul>
+
+          <div class="callout">
+            <div class="callout-label">Flagship project</div>
+            <div class="callout-name">Fully Offline, Secure AI Chatbot for Private Client Data</div>
+            <p>Designed and built an end-to-end, fully offline and self-hosted AI chatbot that lets a client query their own private business data without any information ever leaving their infrastructure, built for organizations with strict data-privacy, compliance, and security requirements.</p>
+            <div><span class="chip">.NET</span><span class="chip">Python</span><span class="chip">PostgreSQL</span><span class="chip">Qdrant</span><span class="chip">Ollama</span><span class="chip">RAG</span></div>
+          </div>
+
+          <div class="also-label">Also delivered</div>
+          <ul class="proj-list"><li><b>Aerport Web Application:</b> Created a new module for handling invoices with connections to Exact and Twinfield accounting applications.</li><li><b>Craig Marloch Store:</b> Built the logic for importing products from the Floriday API.</li><li><b>Interforce Reward Exchange:</b> Built the Reward Rules module for handling rewards based on configurable conditions.</li><li><b>Navigate North:</b> Designed and developed software solutions for race navigation.</li><li><b>PlantBeeb:</b> Played a key role in developing a plant encyclopedia encompassing a vast repository of botanical information and multimedia content.</li><li><b>VDH Solar:</b> Built and maintained the corporate website for VDH Solar, a solar energy solutions provider.</li></ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <span class="job-role">Team Leader</span>
+            <span class="job-dates">Nov 2018 – Apr 2021</span>
+          </div>
+          <div class="job-company">Aptech E-Projects</div>
+          <ul class="proj-list"><li><b>School Administration Website:</b> C# MVC ASP.NET web application. C# with Microsoft SQL Server backend.</li><li><b>Cake Shop E-Commerce Website:</b> PHP server-rendered web application. MySQL backend.</li><li><b>Gift Shop E-Commerce Website:</b> Responsive static website built with HTML, CSS, and JavaScript.</li><li><b>Tourism Management System:</b> Windows Forms frontend. C# with Microsoft SQL Server backend.</li><li><b>Farm Management System:</b> Native Android application in Java. PHP &amp; MySQL API backend.</li></ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

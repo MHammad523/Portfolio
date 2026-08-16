@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# Custom additions on top of the iPortfolio base theme
+# Used for the JSON-driven flagship project card + small polish
+--------------------------------------------------------------*/
+
+.resume .resume-title.flagship-title {
+  color: #149ddd;
+}
+
+.flagship-card {
+  position: relative;
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 10px 0 25px 0;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, #149ddd, #2eafec, #6bd6ff) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 24px rgba(20, 157, 221, 0.12);
+}
+
+.flagship-card .flagship-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.flagship-card .flagship-heading i {
+  font-size: 22px;
+  color: #149ddd;
+  background: rgba(20, 157, 221, 0.1);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flagship-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #050d18;
+  margin: 0;
+}
+
+.flagship-card .flagship-summary {
+  font-style: italic;
+  color: #5e5e5e;
+  margin-bottom: 12px;
+}
+
+.flagship-card .tech-chip {
+  display: inline-block;
+  background: rgba(20, 157, 221, 0.08);
+  color: #0e7cb5;
+  border: 1px solid rgba(20, 157, 221, 0.35);
+  padding: 3px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0 6px 8px 0;
+}
+
+.flagship-card .flagship-details {
+  margin-top: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.flagship-card .flagship-details li {
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.flagship-card .flagship-details li i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: #149ddd;
+}
+
+.flagship-card .flagship-details li strong {
+  color: #050d18;
+}
+
+/* project card without a public link — subtle "internal" tag */
+.portfolio-wrap .no-link-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.resume-item.no-modules p.empty-note {
+  color: #999;
+  font-style: italic;
+}

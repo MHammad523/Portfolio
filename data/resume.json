@@ -1,0 +1,260 @@
+{
+  "basics": {
+    "name": "Muhammad Hammad",
+    "title": [
+      "Web Developer",
+      "C#/Python Programmer",
+      "Database Administrator"
+    ],
+    "email": "mhammad523@gmail.com",
+    "phone": "+92 328 3041264",
+    "portfolio": "https://melodic-fox-416913.netlify.app/",
+    "location": "Karachi, Pakistan",
+    "freelanceAvailable": true,
+    "yearsExperience": 5,
+    "heroTaglines": [
+      "Backend Developer",
+      ".NET Developer",
+      "Database Administrator",
+      "Backend AI Developer",
+      "Python Developer",
+      "React Developer",
+      "Freelancer"
+    ],
+    "summary": "I am a web developer and graphics designer with a love for all things design. With over 5 years of experience, I've worked with clients across Logistics, Retail, and cutting-edge AI. My expertise includes building robust, scalable applications with C# and .NET, integrating REST APIs and databases, and, most recently, designing offline-first AI systems with Python and Ollama for clients with strict data-privacy requirements.",
+    "social": {
+      "github": "https://github.com/MHammad523/Portafolio",
+      "behance": "https://www.behance.net/rdasher"
+    }
+  },
+  "facts": [
+    { "icon": "bi-emoji-smile", "value": 223, "label": "Happy Clients", "description": "My attitude towards others determines their attitude towards me." },
+    { "icon": "bi-journal-richtext", "value": 12, "label": "Projects", "description": "Shipped across web, mobile, and AI." },
+    { "icon": "bi-people", "value": 11, "label": "Sites Deployed", "description": "Fully operational in production." },
+    { "icon": "bi-headset", "value": 6313, "label": "Hours of Development & Support", "description": "Building the best applications." }
+  ],
+  "skillBars": [
+    { "name": "HTML", "percent": 100 },
+    { "name": "CSS", "percent": 75 },
+    { "name": "JavaScript + jQuery", "percent": 95 },
+    { "name": "ASP.NET", "percent": 100 },
+    { "name": "C#", "percent": 100 },
+    { "name": "Python", "percent": 85 },
+    { "name": "Microsoft SQL", "percent": 90 },
+    { "name": "PostgreSQL", "percent": 80 },
+    { "name": "TypeScript", "percent": 65 },
+    { "name": "PHP", "percent": 80 },
+    { "name": "WordPress/CMS", "percent": 60 },
+    { "name": "React JS", "percent": 90 },
+    { "name": "Next JS", "percent": 80 },
+    { "name": "Photoshop / Illustrator", "percent": 85 }
+  ],
+  "experience": [
+    {
+      "company": "NopCommerceTemplate / Interforce Web Development",
+      "position": "Associate Web Developer → Team Lead (Logistics)",
+      "start": "2021-08",
+      "end": null,
+      "current": true,
+      "technologies": ["ASP.NET", "JavaScript", "React JS"],
+      "currentRole": {
+        "label": "Current Role",
+        "start": "2025",
+        "end": null,
+        "current": true,
+        "highlights": [
+          "Leading a small development team under the Technical Lead, coordinating the design, implementation, and delivery of logistics-related features.",
+          "Refactored and rebuilt the entire Visualization module, redesigning its architecture and data flow to achieve up to a 3000x performance improvement while significantly simplifying the overall structure.",
+          "Led the development of numerous stock and inventory management enhancements, improving system performance, maintainability, and user workflows.",
+          "Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems.",
+          "Also shipped and continue to maintain CraigMarloch, Navigate North, and PlantBeeb — full websites (and companion apps) used daily by real customers.",
+          "Continue mentoring junior developers, reviewing code, and driving technical improvements across logistics-focused projects."
+        ],
+        "flagshipProject": {
+          "featured": true,
+          "icon": "bi-shield-lock",
+          "name": "Fully Offline, Secure AI Chatbot for Private Client Data",
+          "summary": "Designed and built an end-to-end, fully offline and self-hosted AI chatbot that lets a client query their own private business data without any information ever leaving their infrastructure, built for organizations with strict data-privacy, compliance, and security requirements.",
+          "technologies": [".NET", "Python", "PostgreSQL", "Qdrant", "Ollama", "RAG"],
+          "details": [
+            { "area": "Architecture", "description": "Designed a Retrieval-Augmented Generation (RAG) pipeline running entirely on-premises, with zero external API calls or third-party data transmission." },
+            { "area": "Local LLM Inference", "description": "Integrated Ollama to run open-source large language models locally, giving the client full control over the model, its behavior, and its data footprint." },
+            { "area": "Backend & Orchestration", "description": "Built the core API, chat session management, and access-control layer in .NET, exposing secure endpoints for document ingestion, chat, and administration." },
+            { "area": "Data & Embedding Pipeline", "description": "Developed the document processing pipeline in Python, parsing, chunking, and embedding client documents for semantic retrieval." },
+            { "area": "Vector Storage", "description": "Used a self-hosted Qdrant instance as the dedicated vector store for embeddings, alongside PostgreSQL for chat history and document metadata, keeping the entire pipeline on-premises with no external vector-database dependency." },
+            { "area": "Security & Compliance", "description": "Delivered a fully air-gapped-capable deployment model, ensuring complete confidentiality of sensitive client data and satisfying internal security review requirements." },
+            { "area": "Outcome", "description": "Gave the client a production-ready, private AI assistant over their own knowledge base, with no recurring API costs and no third-party data exposure." }
+          ]
+        }
+      },
+      "projects": [
+        {
+          "name": "Aerport Web Application",
+          "filterKey": "Aerport",
+          "link": null,
+          "images": [
+            "assets/img/portfolio/Aerport/Aerport.jpg",
+            "assets/img/portfolio/Aerport/Visualization.jpg",
+            "assets/img/portfolio/Aerport/PurchaseInvoice.jpg",
+            "assets/img/portfolio/Aerport/Approval.jpg",
+            "assets/img/portfolio/Aerport/Approval2.jpg",
+            "assets/img/portfolio/Aerport/BudgetLimit.jpg",
+            "assets/img/portfolio/Aerport/PowerBi.jpg",
+            "assets/img/portfolio/Aerport/Kanban.jpg",
+            "assets/img/portfolio/Aerport/Correction.jpg"
+          ],
+          "modules": [
+            { "name": "Purchase Invoice Module", "description": ["Created a new module for handling invoices with connections to Exact and Twinfield accounting applications."] },
+            { "name": "Authorization Modules", "description": ["Designed and built a module specifically for handling invoice and approval limits."] },
+            { "name": "Shipment and Hub Shipment Module", "description": ["Worked on the logic and UI for handling shipments to hubs and customers."] },
+            { "name": "Product Module", "description": ["Built a procedure for handling inventory stock entries and breakdowns."] },
+            { "name": "Power BI Module", "description": ["Built the module for displaying Power BI reports under a service principal user."] }
+          ]
+        },
+        {
+          "name": "Craig Marloch Store",
+          "filterKey": "CraigMarloch",
+          "link": "http://craigmarloch.direct/",
+          "images": [
+            "assets/img/portfolio/CraigMarloch/craigmarloch.direct_.jpg",
+            "assets/img/portfolio/CraigMarloch/craigmarloch.direct_Admin.jpg",
+            "assets/img/portfolio/CraigMarloch/craigmarloch.direct_Admin_Product_Edit_3994.jpg",
+            "assets/img/portfolio/CraigMarloch/craigmarloch.direct_bundledeals.jpg",
+            "assets/img/portfolio/CraigMarloch/craigmarloch.direct_cart.jpg"
+          ],
+          "modules": [
+            { "name": "Store", "description": ["Built the logic for importing products from the Floriday API.", "Built a dynamic .NET Core store for purchasing plants."] }
+          ]
+        },
+        {
+          "name": "Interforce Reward Exchange",
+          "filterKey": "RewardExchange",
+          "link": null,
+          "images": [],
+          "modules": [
+            { "name": "Reward Rule Module", "description": ["Built the Reward Rules module for handling rewards based on configurable conditions."] },
+            { "name": "Home Screen", "description": ["Reworked the home screen logic and UI to greatly improve usability."] }
+          ]
+        },
+        {
+          "name": "Navigate North",
+          "filterKey": "NavigateNorth",
+          "link": "https://navigatenorth.nl/",
+          "images": [
+            "assets/img/portfolio/NavigateNorth/Dashboard.jpg",
+            "assets/img/portfolio/NavigateNorth/EditionDetail.jpg",
+            "assets/img/portfolio/NavigateNorth/EditionTeams.jpg",
+            "assets/img/portfolio/NavigateNorth/Edition.jpg",
+            "assets/img/portfolio/NavigateNorth/Trail.jpg",
+            "assets/img/portfolio/NavigateNorth/Trail2.jpg",
+            "assets/img/portfolio/NavigateNorth/Map.jpg",
+            "assets/img/portfolio/NavigateNorth/GPSData.jpg",
+            "assets/img/portfolio/NavigateNorth/Result.jpg",
+            "assets/img/portfolio/NavigateNorth/ResultScreen.jpg",
+            "assets/img/portfolio/NavigateNorth/Resutls2.jpg",
+            "assets/img/portfolio/NavigateNorth/DayResult.jpg",
+            "assets/img/portfolio/NavigateNorth/Settings.jpg",
+            "assets/img/portfolio/NavigateNorth/StageDetail.jpg",
+            "assets/img/portfolio/NavigateNorth/StageResult.jpg",
+            "assets/img/portfolio/NavigateNorth/StageTeamJourney.jpg",
+            "assets/img/portfolio/NavigateNorth/StageTeamJourney2.jpg"
+          ],
+          "modules": [
+            { "name": "Event Management System", "description": ["Designed and developed software solutions for race navigation.", "Conducted extensive testing and debugging to ensure the accuracy of the software under diverse racing conditions."] }
+          ]
+        },
+        {
+          "name": "PlantBeeb",
+          "filterKey": "PlantBeeb",
+          "link": "https://plantbeeb.com",
+          "images": [
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_30031.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin_OpenAI_CareTipRequestLog.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_Admin_Report_GardenCenterScanHistorySummary.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_locations.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_search_q=acer.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_specialists.jpg",
+            "assets/img/portfolio/PlantBeeb/plantbeeb.com_plantbeeb-qr-code-2.jpg",
+            "assets/img/portfolio/PlantBeeb/Account.jpg",
+            "assets/img/portfolio/PlantBeeb/Chatbot.jpg",
+            "assets/img/portfolio/PlantBeeb/ImageRecognition.jpg",
+            "assets/img/portfolio/PlantBeeb/Location.jpg",
+            "assets/img/portfolio/PlantBeeb/Product.jpg",
+            "assets/img/portfolio/PlantBeeb/QRScanner.jpg"
+          ],
+          "modules": [
+            { "name": "Plant Encyclopedia System", "description": ["Played a key role in developing a plant encyclopedia encompassing a vast repository of botanical information and multimedia content.", "Developed an AI-powered chatbot."] }
+          ]
+        },
+        {
+          "name": "VDH Solar",
+          "filterKey": "VDHSolar",
+          "link": "http://vdh-solar.nl/",
+          "images": [
+            "assets/img/portfolio/VDH/vdh-solar.nl_.jpg",
+            "assets/img/portfolio/VDH/vdh-solar.nl_onzemerken.jpg",
+            "assets/img/portfolio/VDH/vdh-solar.nl_c-inverters.jpg"
+          ],
+          "modules": [
+            { "name": "Corporate Website", "description": ["Built and maintained the corporate website for VDH Solar, a solar energy solutions provider."] }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Aptech E-Projects",
+      "position": "Team Leader",
+      "start": "2018-11",
+      "end": "2021-04",
+      "current": false,
+      "technologies": ["ASP.NET", "PHP", "Android", "UWP"],
+      "projects": [
+        { "name": "School Administration Website", "images": [], "description": ["C# MVC ASP.NET web application.", "C# with Microsoft SQL Server backend."] },
+        { "name": "Cake Shop E-Commerce Website", "images": [], "description": ["PHP server-rendered web application.", "MySQL backend."] },
+        { "name": "Gift Shop E-Commerce Website", "images": [], "description": ["Responsive static website built with HTML, CSS, and JavaScript."] },
+        { "name": "Tourism Management System", "images": [], "description": ["Windows Forms frontend.", "C# with Microsoft SQL Server backend."] },
+        { "name": "Farm Management System", "images": [], "description": ["Native Android application in Java.", "PHP & MySQL API backend."] }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Aptech",
+      "program": "ACCP-EE Diploma",
+      "start": "2018-08",
+      "end": "2021-08",
+      "achievements": [
+        "Certificate of Proficiency in Information Systems Management",
+        "Diploma in Information Systems Management",
+        "Higher Diploma in Software Engineering"
+      ]
+    },
+    {
+      "institution": "Private Cambridge",
+      "program": "AS & A Levels",
+      "start": "2019-09",
+      "end": "2021-11",
+      "subjects": ["Physics", "Mathematics", "Computer Science"]
+    },
+    {
+      "institution": "The Oxford School, Dubai",
+      "program": "IGCSE / High School Diploma",
+      "start": "2015-09",
+      "end": "2018-08",
+      "subjects": ["English", "Physics", "Chemistry", "Mathematics", "Computer Science"]
+    }
+  ],
+  "skills": {
+    "web": ["ASP.NET MVC", "NopCommerce Framework", "ASP.NET Core", "jQuery", "React", "SASS", "Node.js", "Next.js"],
+    "languages": ["C#", "JavaScript", "TypeScript", "Python", "C/C++", "Java", "Swift"],
+    "databases": ["Microsoft SQL Server", "PostgreSQL", "MongoDB", "MySQL"],
+    "ai_ml": ["Ollama", "Retrieval-Augmented Generation (RAG)", "LLM Integration", "Vector Embeddings", "Qdrant"]
+  },
+  "contact": {
+    "location": "Karachi, Pakistan",
+    "email": "mhammad523@gmail.com",
+    "phone": "+92 328 3041264"
+  }
+}
