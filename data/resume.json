@@ -205,9 +205,16 @@
           "name": "YouCar",
           "filterKey": "YouCar",
           "link": "http://youcar.nl/",
-          "images": [],
+          "images": [
+            "assets/img/portfolio/YouCar/youcar.nl_home.jpg",
+            "assets/img/portfolio/YouCar/youcar.nl_autoverhuur.jpg",
+            "assets/img/portfolio/YouCar/youcar.nl_booking.jpg",
+            "assets/img/portfolio/YouCar/youcar.nl_opties.jpg"
+          ],
           "modules": [
-            { "name": "Site Rebuild", "description": ["Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems."] }
+            { "name": "Site Rebuild", "description": ["Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems."] },
+            { "name": "Dynamic Pricing Engine", "description": ["Engineered a real-time price calculation engine that computes live rental quotes on the fly — layering vehicle tariffs, date-range and seasonal multipliers, optional add-ons, insurance tiers, and promotional discounts into a single continuously-updating total as customers configure their booking."] },
+            { "name": "Online Payments", "description": ["Integrated Stripe to power secure, PCI-compliant payments directly inside the booking flow, letting customers reserve and pay in one seamless checkout."] }
           ]
         }
       ]

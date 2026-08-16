@@ -168,11 +168,13 @@ def build_header(data):
         icon = social_icons.get(key.lower(), "bi-link-45deg")
         social_html += f'<a class="icon-btn" href="{esc(url)}" target="_blank" rel="noopener" aria-label="{esc(key.title())}"><i class="bi {icon}" aria-hidden="true"></i></a>\n'
 
-    first_name = basics["name"].split(" ")[0]
+    name_parts = basics["name"].split(" ")
+    first_initial = name_parts[0][0].lower()
+    last_name_lower = name_parts[-1].lower()
 
     return f"""<header class="site-header">
   <div class="container header-inner">
-    <a href="#top" class="brand">{esc(first_name)}<span class="brand-dot">.</span>dev</a>
+    <a href="#top" class="brand">{esc(first_initial)}<span class="brand-dot">.</span>{esc(last_name_lower)}<span class="brand-dot">.</span>dev</a>
     <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -402,10 +404,12 @@ def build_portfolio(data):
         pills += f'<button class="pill" data-filter="{esc(key)}" type="button">{esc(p["name"])}</button>\n'
 
         cover = p["images"][0]
-        blurb = ""
-        if p.get("modules"):
-            desc = p["modules"][0].get("description") or []
-            blurb = desc[0] if desc else ""
+        blurb_parts = []
+        for mod in p.get("modules", []):
+            desc = mod.get("description") or []
+            if desc:
+                blurb_parts.append(desc[0])
+        blurb = " ".join(blurb_parts)
         images_json = esc(json.dumps(p["images"], ensure_ascii=False))
 
         if p.get("link"):
