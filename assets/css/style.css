@@ -563,9 +563,9 @@ html[data-theme="light"] .bg-decor .blob { opacity: 0.18; }
 .work-card:hover { transform: translateY(-6px); }
 .work-card--featured {
   border: 1px solid transparent;
-  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+  background: linear-gradient(var(--surface-solid), var(--surface-solid)) padding-box,
               var(--gradient) border-box;
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+  box-shadow: var(--shadow-card);
 }
 .work-thumb {
   display: block;
