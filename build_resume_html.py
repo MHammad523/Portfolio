@@ -21,7 +21,7 @@ import html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(ROOT, "data", "resume.json")
 OUT_PATH = os.path.join(ROOT, "Resume.html")
-PORTFOLIO_URL = "https://mhammad523.github.io/"
+PORTFOLIO_URL = "https://melodic-fox-416913.netlify.app"
 
 
 def esc(s):
@@ -188,7 +188,7 @@ HTML = f"""<!DOCTYPE html>
     position: absolute;
     top: 0; left: 68mm; right: 0;
     height: 297mm;
-    padding: 17mm 15mm 13mm 13mm;
+    padding: 14mm 15mm 10mm 13mm;
   }}
 
   /* ---------- header ---------- */
@@ -199,11 +199,11 @@ HTML = f"""<!DOCTYPE html>
     gap: 6mm;
   }}
   .name {{
-    font-size: 26pt;
+    font-size: 23pt;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.3px;
-    margin: 0 0 2mm;
+    margin: 0 0 1.6mm;
   }}
   .name .last {{ color: var(--accent); font-weight: 700; }}
   .titles {{
@@ -233,7 +233,7 @@ HTML = f"""<!DOCTYPE html>
 
   .rule {{
     position: relative;
-    margin: 4mm 0 6mm;
+    margin: 3mm 0 4mm;
     border-top: 1px solid var(--line-strong);
   }}
   .rule::before {{
@@ -250,7 +250,7 @@ HTML = f"""<!DOCTYPE html>
     text-transform: uppercase;
     color: var(--ink);
     font-weight: 700;
-    margin: 0 0 2.4mm;
+    margin: 0 0 1.8mm;
   }}
   .rail-block {{ margin-bottom: 6mm; }}
   .rail-block h2.section {{
@@ -307,54 +307,54 @@ HTML = f"""<!DOCTYPE html>
   }}
 
   /* ---------- experience (main column) ---------- */
-  .job {{ margin-bottom: 3.6mm; }}
+  .job {{ margin-bottom: 2.6mm; }}
   .job-top {{ display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }}
-  .job-role {{ font-size: 9.4pt; font-weight: 700; color: var(--ink); }}
-  .job-dates {{ font-size: 6.8pt; color: var(--muted); white-space: nowrap; }}
-  .job-company {{ font-size: 7.6pt; color: var(--accent); font-weight: 600; margin: 0.4mm 0 1.8mm; }}
+  .job-role {{ font-size: 9pt; font-weight: 700; color: var(--ink); }}
+  .job-dates {{ font-size: 6.6pt; color: var(--muted); white-space: nowrap; }}
+  .job-company {{ font-size: 7.3pt; color: var(--accent); font-weight: 600; margin: 0.4mm 0 1.4mm; }}
 
   ul.bullets {{
-    margin: 0 0 2mm;
-    padding-left: 3.4mm;
-    font-size: 7.3pt;
-    line-height: 1.48;
+    margin: 0 0 1.4mm;
+    padding-left: 3.2mm;
+    font-size: 6.9pt;
+    line-height: 1.38;
     color: var(--ink-soft);
   }}
-  ul.bullets li {{ margin-bottom: 0.6mm; }}
+  ul.bullets li {{ margin-bottom: 0.4mm; }}
   ul.bullets li::marker {{ color: var(--accent); }}
 
   .callout {{
-    margin: 2.4mm 0;
-    padding: 2.6mm 3.4mm;
+    margin: 1.6mm 0;
+    padding: 1.8mm 3mm;
     border-left: 2px solid var(--accent);
     background: var(--accent-tint);
     border-radius: 0 3px 3px 0;
   }}
   .callout .callout-label {{
-    font-size: 6.6pt;
+    font-size: 6.3pt;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 700;
-    margin-bottom: 1mm;
+    margin-bottom: 0.8mm;
   }}
   .callout .callout-name {{
-    font-size: 8.3pt;
+    font-size: 8pt;
     font-weight: 700;
     color: var(--ink);
-    margin-bottom: 1mm;
+    margin-bottom: 0.8mm;
   }}
   .callout p {{
-    font-size: 7.2pt;
-    line-height: 1.48;
+    font-size: 6.9pt;
+    line-height: 1.4;
     color: var(--ink-soft);
-    margin: 0 0 1.8mm;
+    margin: 0 0 1.2mm;
   }}
   .chip {{
     display: inline-block;
-    font-size: 6.4pt;
-    padding: 0.7mm 1.7mm;
-    margin: 0 0.8mm 0.8mm 0;
+    font-size: 6.2pt;
+    padding: 0.6mm 1.6mm;
+    margin: 0 0.7mm 0.7mm 0;
     border: 1px solid var(--line-strong);
     border-radius: 3px;
     color: var(--ink-soft);
@@ -362,28 +362,28 @@ HTML = f"""<!DOCTYPE html>
   }}
 
   .also-label {{
-    font-size: 6.8pt;
+    font-size: 6.6pt;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--ink);
-    margin: 2.2mm 0 1.2mm;
+    margin: 1.6mm 0 0.9mm;
   }}
   ul.proj-list {{
     margin: 0;
-    padding-left: 3.4mm;
-    font-size: 7.1pt;
-    line-height: 1.48;
+    padding-left: 3.2mm;
+    font-size: 6.7pt;
+    line-height: 1.38;
     color: var(--ink-soft);
   }}
-  ul.proj-list li {{ margin-bottom: 0.6mm; }}
+  ul.proj-list li {{ margin-bottom: 0.4mm; }}
   ul.proj-list li::marker {{ color: var(--accent); }}
   ul.proj-list b {{ color: var(--ink); }}
 
   @media print {{
-    html, body {{ background: #fff; }}
+    html, body {{ background: #fff; height: 297mm; overflow: hidden; }}
     .print-hint {{ display: none; }}
-    .page-wrap {{ padding: 0; }}
+    .page-wrap {{ padding: 0; height: 297mm; overflow: hidden; }}
     .page {{ box-shadow: none; }}
   }}
 </style>
