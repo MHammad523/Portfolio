@@ -92,6 +92,8 @@
           "name": "Aerport Web Application",
           "filterKey": "Aerport",
           "link": null,
+          "featured": true,
+          "tagline": "Main day-to-day project — most of the platform's core logic lives here, and the offline AI chatbot was built to integrate directly into it.",
           "images": [
             "assets/img/portfolio/Aerport/Aerport.jpg",
             "assets/img/portfolio/Aerport/Visualization.jpg",

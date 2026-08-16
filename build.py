@@ -417,13 +417,20 @@ def build_portfolio(data):
         else:
             link_html = '<span class="work-tag">Internal system</span>'
 
-        cards += f"""<article class="work-card reveal" data-cat="{esc(key)}">
+        featured = bool(p.get("featured"))
+        card_class = "work-card reveal" + (" work-card--featured" if featured else "")
+        badge_html = '<span class="work-badge"><i class="bi bi-star-fill" aria-hidden="true"></i> Main Project</span>' if featured else ""
+        tagline_html = f'<p class="work-tagline">{esc(p["tagline"])}</p>' if featured and p.get("tagline") else ""
+
+        cards += f"""<article class="{card_class}" data-cat="{esc(key)}">
       <button class="work-thumb" type="button" data-images='{images_json}' data-title="{esc(p['name'])}" aria-label="Open {esc(p['name'])} gallery">
+        {badge_html}
         {img_tag(cover, p['name'] + " screenshot", loading="lazy")}
         <span class="work-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i> View gallery ({len(p['images'])})</span>
       </button>
       <div class="work-info">
         <h3>{esc(p['name'])}</h3>
+        {tagline_html}
         <p>{esc(blurb)}</p>
         {link_html}
       </div>
