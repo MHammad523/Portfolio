@@ -74,7 +74,7 @@
           "featured": true,
           "icon": "bi-shield-lock",
           "name": "Fully Offline, Secure AI Chatbot for Private Client Data",
-          "summary": "Designed and built an end-to-end, fully offline and self-hosted AI chatbot that lets a client query their own private business data without any information ever leaving their infrastructure, built for organizations with strict data-privacy, compliance, and security requirements.",
+          "summary": "Designed and built an end-to-end, fully offline and self-hosted AI chatbot that lets a client query their own private business data without any information ever leaving their infrastructure, built for organizations with strict data-privacy, compliance, and security requirements. Designed for direct integration into Aerport, giving users natural-language access to their own Aerport data.",
           "technologies": [".NET", "Python", "PostgreSQL", "Qdrant", "Ollama", "RAG"],
           "details": [
             { "area": "Architecture", "description": "Designed a Retrieval-Augmented Generation (RAG) pipeline running entirely on-premises, with zero external API calls or third-party data transmission." },

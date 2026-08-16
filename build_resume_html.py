@@ -64,8 +64,28 @@ exp1 = data["experience"][1]
 
 current_highlights_html = "".join(f"<li>{esc(h)}</li>" for h in cr.get("highlights", []))
 
+# Aerport is the flagship day-to-day project (most of the work happens here,
+# and the AI chatbot above was built to integrate with it) — pull it out for
+# its own condensed highlight paragraph instead of folding it into the
+# generic "Also delivered" one-liner list.
+aerport_project = next((p for p in exp0["projects"] if p.get("filterKey") == "Aerport"), None)
+aerport_highlight_html = ""
+if aerport_project:
+    mod_lines = []
+    for i, mod in enumerate(aerport_project.get("modules", [])):
+        d = mod.get("description") or []
+        if not d:
+            continue
+        line = d[0].rstrip(".")
+        if i > 0:
+            line = line[0].lower() + line[1:]
+        mod_lines.append(line)
+    aerport_highlight_html = "; ".join(mod_lines) + "."
+
 proj_bits = []
 for p in exp0["projects"]:
+    if aerport_project and p is aerport_project:
+        continue
     mods = p.get("modules", [])
     d = mods[0]["description"][0] if mods and mods[0].get("description") else ""
     proj_bits.append(f'<li><b>{esc(p["name"])}:</b> {esc(d)}</li>')
@@ -369,6 +389,12 @@ HTML = f"""<!DOCTYPE html>
     color: var(--ink);
     margin: 1.6mm 0 0.9mm;
   }}
+  .highlight-para {{
+    font-size: 6.9pt;
+    line-height: 1.42;
+    color: var(--ink-soft);
+    margin: 0 0 1.2mm;
+  }}
   ul.proj-list {{
     margin: 0;
     padding-left: 3.2mm;
@@ -453,6 +479,9 @@ HTML = f"""<!DOCTYPE html>
             <p>{esc(fp['summary'])}</p>
             <div>{flagship_tech_chips}</div>
           </div>
+
+          <div class="also-label">Aerport Web Application — Core Modules</div>
+          <p class="highlight-para">{esc(aerport_highlight_html)}</p>
 
           <div class="also-label">Also delivered</div>
           <ul class="proj-list">{also_delivered_html}</ul>
