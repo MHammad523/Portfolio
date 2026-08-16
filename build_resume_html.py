@@ -71,16 +71,13 @@ current_highlights_html = "".join(f"<li>{esc(h)}</li>" for h in cr.get("highligh
 aerport_project = next((p for p in exp0["projects"] if p.get("filterKey") == "Aerport"), None)
 aerport_highlight_html = ""
 if aerport_project:
-    mod_lines = []
-    for i, mod in enumerate(aerport_project.get("modules", [])):
+    mod_items = []
+    for mod in aerport_project.get("modules", []):
         d = mod.get("description") or []
         if not d:
             continue
-        line = d[0].rstrip(".")
-        if i > 0:
-            line = line[0].lower() + line[1:]
-        mod_lines.append(line)
-    aerport_highlight_html = "; ".join(mod_lines) + "."
+        mod_items.append(f'<li>{esc(d[0])}</li>')
+    aerport_highlight_html = "".join(mod_items)
 
 proj_bits = []
 for p in exp0["projects"]:
@@ -208,7 +205,7 @@ HTML = f"""<!DOCTYPE html>
     position: absolute;
     top: 0; left: 68mm; right: 0;
     height: 297mm;
-    padding: 14mm 15mm 10mm 13mm;
+    padding: 12mm 15mm 8mm 13mm;
   }}
 
   /* ---------- header ---------- */
@@ -327,17 +324,17 @@ HTML = f"""<!DOCTYPE html>
   }}
 
   /* ---------- experience (main column) ---------- */
-  .job {{ margin-bottom: 2.6mm; }}
+  .job {{ margin-bottom: 2mm; }}
   .job-top {{ display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }}
   .job-role {{ font-size: 9pt; font-weight: 700; color: var(--ink); }}
   .job-dates {{ font-size: 6.6pt; color: var(--muted); white-space: nowrap; }}
   .job-company {{ font-size: 7.3pt; color: var(--accent); font-weight: 600; margin: 0.4mm 0 1.4mm; }}
 
   ul.bullets {{
-    margin: 0 0 1.4mm;
+    margin: 0 0 1mm;
     padding-left: 3.2mm;
-    font-size: 6.9pt;
-    line-height: 1.38;
+    font-size: 6.8pt;
+    line-height: 1.32;
     color: var(--ink-soft);
   }}
   ul.bullets li {{ margin-bottom: 0.4mm; }}
@@ -388,12 +385,6 @@ HTML = f"""<!DOCTYPE html>
     font-weight: 700;
     color: var(--ink);
     margin: 1.6mm 0 0.9mm;
-  }}
-  .highlight-para {{
-    font-size: 6.9pt;
-    line-height: 1.42;
-    color: var(--ink-soft);
-    margin: 0 0 1.2mm;
   }}
   ul.proj-list {{
     margin: 0;
@@ -481,7 +472,7 @@ HTML = f"""<!DOCTYPE html>
           </div>
 
           <div class="also-label">Aerport Web Application — Core Modules</div>
-          <p class="highlight-para">{esc(aerport_highlight_html)}</p>
+          <ul class="bullets">{aerport_highlight_html}</ul>
 
           <div class="also-label">Also delivered</div>
           <ul class="proj-list">{also_delivered_html}</ul>
