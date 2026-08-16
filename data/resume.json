@@ -200,6 +200,15 @@
           "modules": [
             { "name": "Corporate Website", "description": ["Built and maintained the corporate website for VDH Solar, a solar energy solutions provider."] }
           ]
+        },
+        {
+          "name": "YouCar",
+          "filterKey": "YouCar",
+          "link": "http://youcar.nl/",
+          "images": [],
+          "modules": [
+            { "name": "Site Rebuild", "description": ["Led the development of the new YouCar.nl site, delivering new features across both frontend and backend systems."] }
+          ]
         }
       ]
     },
